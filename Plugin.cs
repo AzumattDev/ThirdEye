@@ -14,18 +14,14 @@ namespace ThirdEye
     public class ThirdEyePlugin : BaseUnityPlugin
     {
         internal const string ModName = "ThirdEye";
-        internal const string ModVersion = "2.1.3";
+        internal const string ModVersion = "2.1.4";
         internal const string Author = "Azumatt";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
         private static string ConfigFileFullPath = Paths.ConfigPath + Path.DirectorySeparatorChar + ConfigFileName;
         internal static string ConnectionError = "";
-
-        public static readonly ManualLogSource ThirdEyeLogger =
-            BepInEx.Logging.Logger.CreateLogSource(ModName);
-
-        private static readonly ConfigSync ConfigSync = new(ModGUID)
-            { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
+        public static readonly ManualLogSource ThirdEyeLogger = BepInEx.Logging.Logger.CreateLogSource(ModName);
+        private static readonly ConfigSync ConfigSync = new(ModGUID) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
 
         public enum Toggle
         {
@@ -73,12 +69,8 @@ namespace ThirdEye
                 "Should the ping be able to detect tamed animals?");
 
 
-            Skill
-                thirdeye = new("ThirdEye",
-                    "thirdeye.png"); // Skill name along with the skill icon. By default the icon is found in the icons folder. Put it there if you wish to load one.
-
-            thirdeye.Name
-                .English("Third Eye"); // Vanilla can't find it if it has a space, so, re-localize here with one.
+            Skill thirdeye = new("ThirdEye", "thirdeye.png"); // Skill name along with the skill icon. By default the icon is found in the icons folder. Put it there if you wish to load one.
+            thirdeye.Name.English("Third Eye"); // Vanilla can't find it if it has a space, so, re-localize here with one.
             thirdeye.Description.English("Sense enemies around you");
             thirdeye.Configurable = true;
 
@@ -180,7 +172,7 @@ namespace ThirdEye
             public override bool IsValid(object value) => true;
 
             public override string ToDescriptionString() =>
-                "# Acceptable values: " + string.Join(", ", KeyboardShortcut.AllKeyCodes);
+                "# Acceptable values: " + string.Join(", ", UnityInput.Current.SupportedKeyCodes);
         }
 
         #endregion
