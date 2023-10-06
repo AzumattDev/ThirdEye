@@ -1,4 +1,6 @@
 > # Update Information (Latest listed first)
+> ### v2.1.5
+> - Recompiled for Valheim 0.217.22
 > ### v2.1.4
 > - Recompiled for Valheim 0.217.14.
 > ### v2.1.3
