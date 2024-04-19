@@ -14,7 +14,7 @@ namespace ThirdEye
     public class ThirdEyePlugin : BaseUnityPlugin
     {
         internal const string ModName = "ThirdEye";
-        internal const string ModVersion = "2.1.5";
+        internal const string ModVersion = "2.1.6";
         internal const string Author = "Azumatt";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
