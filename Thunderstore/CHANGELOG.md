@@ -1,4 +1,6 @@
 > # Update Information (Latest listed first)
+> ### v2.1.7
+> - Recompiled for Bog Witch.
 > ### v2.1.6
 > - Recompiled for Valheim 0.217.46
 > ### v2.1.5

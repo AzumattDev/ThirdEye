@@ -49,8 +49,7 @@ namespace ThirdEye.Patches
                     if (!InvalidKey)
                     {
                         InvalidKey = true;
-                        ThirdEyeLogger.LogDebug(
-                            $"ThirdEye ERROR: You bound an invalid key! Please check the config file and try again. You can consult a Unity guide for a list of valid key codes. {e}");
+                        ThirdEyeLogger.LogDebug($"ThirdEye ERROR: You bound an invalid key! Please check the config file and try again. You can consult a Unity guide for a list of valid key codes. {e}");
                     }
                 }
             }
@@ -76,8 +75,7 @@ namespace ThirdEye.Patches
             //Create the ping effects.
             if (ShowVisual.Value == Toggle.On)
             {
-                Transform visualObject = UnityEngine.Object.Instantiate(ZNetSceneGrabber.GetVisualEffect(),
-                    __instance.GetHeadPoint(), Quaternion.identity);
+                Transform visualObject = UnityEngine.Object.Instantiate(ZNetSceneGrabber.GetVisualEffect(), __instance.GetHeadPoint(), Quaternion.identity);
             }
 
             if (PlayAudio.Value == Toggle.On)
