@@ -1,4 +1,6 @@
 > # Update Information (Latest listed first)
+> ### v2.1.9
+> - Update ServerSync
 > ### v2.1.8
 > - Update for Valheim latest update (0.220.3)
 > ### v2.1.7
